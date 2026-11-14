@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Activities | Registration Terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="console-box">
+    <header class="console-title">
+      <h1>Activity Sign-Up Terminal</h1>
+      <p>Submit participant credentials below to validate constraints and generate your secure entry pass.</p>
+    </header>
+
+    <div class="card-panel">
+      <form id="eventForm">
+        <label for="studentName">Participant Name</label>
+        <input 
+          type="text" 
+          id="studentName" 
+          required 
+          minlength="3" 
+          placeholder="Enter full name (min 3 chars)"
+        >
+
+        <label for="email">Electronic Mail</label>
+        <input 
+          type="email" 
+          id="email" 
+          required 
+          placeholder="student@school.edu"
+        >
+
+        <label for="age">Participant Age (8 - 18)</label>
+        <input 
+          type="number" 
+          id="age" 
+          required 
+          min="8" 
+          max="18" 
+          placeholder="Enter age"
+        >
+
+        <label for="eventName">Event Selection</label>
+        <select id="eventName" required>
+          <option value="">-- Choose an Activity --</option>
+          <option value="Science Fair">Science Fair</option>
+          <option value="Coding Workshop">Coding Workshop</option>
+          <option value="Art Competition">Art Competition</option>
+          <option value="Sports Day">Sports Day</option>
+        </select>
+
+        <button type="button" id="executeBtn">Submit &amp; Generate Pass</button>
+      </form>
+
+      <div id="feedback">
+        System idle. Awaiting input credentials...
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
